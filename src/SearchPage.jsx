@@ -70,7 +70,7 @@ const SearchPage = () => {
             About {data?.searchInformation.formattedTotalResults} results (
             {data?.searchInformation.formattedSearchTime} seconds) for {term}
           </p>
-          {data.items.map((result) => {
+          {data.items.map((result) => (
             <div className="search__page--result">
               <a href={result.link}>{result.displayLink}</a>
 
@@ -87,8 +87,8 @@ const SearchPage = () => {
                 <h2>{result.title}</h2>
               </a>
               <p className="search__result--snippet">{result.snippet}</p>
-            </div>;
-          })}
+            </div>
+          ))}
         </div>
       )}
     </div>
